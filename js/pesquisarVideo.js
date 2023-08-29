@@ -5,6 +5,7 @@ async function buscaVideo(e) {
     e.preventDefault();
 
     const dadosDePesquisa = document.querySelector("[data-pesquisa]").value;
+
     const busca = await conectaApi.buscaVideo(dadosDePesquisa);
 
     const lista = document.querySelector("[data-lista]");

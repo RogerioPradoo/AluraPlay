@@ -1,12 +1,12 @@
 async function listaVideos() {
-    const conexao = await fetch('http://localhost:3000/videos')
+    const conexao = await fetch('https://64ed67eef9b2b70f2bfb7b10.mockapi.io/videos')
     const conexaoConvertida = await conexao.json();
 
     return conexaoConvertida
 }
 
 async function criaVideo(titulo, descricao, url, imagem) {
-    const conexao = await fetch("http://localhost:3000/videos", {
+    const conexao = await fetch("https://64ed67eef9b2b70f2bfb7b10.mockapi.io/videos", {
         method: "POST",
         headers: {
             "Content-type": "application/json"
@@ -29,9 +29,8 @@ async function criaVideo(titulo, descricao, url, imagem) {
 }
 
 async function buscaVideo(termoDeBusca) {
-    const conexao = await fetch(`http://localhost:3000/videos?q=${termoDeBusca}`)
+    const conexao = await fetch(`https://64ed67eef9b2b70f2bfb7b10.mockapi.io/videos?q=${termoDeBusca}`)
     const conexaoConvertida = await conexao.json();
-
     return conexaoConvertida
 }
 
